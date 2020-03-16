@@ -27,12 +27,14 @@ function charMap(str) {
 function oneToOne(s1, s2) {
     let firstCharMap = Object.keys(charMap(s1)).length
     let secondCharMap = Object.keys(charMap(s2)).length
-
+   
+    
     if (s1.length === s2.length && firstCharMap >= secondCharMap) {
-      console.log(true)
+        process.stdout.write('true\n')
     } else {
-      console.log(false)
+        process.stdout.write('false\n')
     }
+  
 }
 
 var args = process.argv;
