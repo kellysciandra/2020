@@ -5,7 +5,7 @@
 
 // first we need to build a chacter map function 
 
-
+'use strict';
 
 // character map taking in a string 
 function charMap(str) {
@@ -21,3 +21,20 @@ function charMap(str) {
   return charMap
 }
 
+
+// test case function 
+
+function oneToOne(s1, s2) {
+    let firstCharMap = Object.keys(charMap(s1)).length
+    let secondCharMap = Object.keys(charMap(s2)).length
+
+    if (s1.length === s2.length && firstCharMap >= secondCharMap) {
+      console.log(true)
+    } else {
+      console.log(false)
+    }
+}
+
+var args = process.argv;
+
+oneToOne(args[2], args[3])
